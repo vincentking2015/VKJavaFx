@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">com.vk.core.vksql.SQLiteDialect</property> <!-- 数据库方言 -->
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property><!-- 引用jdbc包 -->
+        <property name="hibernate.connection.url">jdbc:sqlite:src/main/resources/db/vk.db</property> <!-- 数据库链接 -->
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.show_sql">true</property>
+
+    </session-factory>
+
+</hibernate-configuration>

@@ -1,0 +1,24 @@
+{
+  "path": "/com/vk/fxml",
+  "children": [
+    {
+      "name": "主      页",
+      "hidden": false,
+      "icon": null,
+      "children": null
+    },
+    {
+      "name": "测试",
+      "hidden": false,
+      "icon": null,
+      "children": [
+        {
+          "name": "子项目"
+        },
+        {
+          "name": "子项目2"
+        }
+      ]
+    }
+  ]
+}

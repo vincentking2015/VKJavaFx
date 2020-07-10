@@ -1,0 +1,18 @@
+
+.themeStyle {
+    -fx-background-color: #e5d3d3;
+}
+
+.tree-cell:even {
+    -fx-background-color: #e5d3d3;
+}
+.tree-cell:odd {
+    -fx-background-color: #e5d3d3;
+}
+.tree-cell:selected {
+    -fx-background-color: #cbcbc5;
+    -fx-color-label-visible: white;
+}
+.tree-cell:empty {
+    -fx-background-color: #e5d3d3;
+}

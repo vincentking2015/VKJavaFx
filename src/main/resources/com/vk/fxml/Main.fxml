@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="1051.0" stylesheets="@../../../css/defaultTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vk.controller.MainController">
+   <top>
+      <HBox prefHeight="60.0" prefWidth="930.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="60.0" styleClass="themeStyle">
+               <children>
+                  <ImageView fx:id="logoImg" fitHeight="50.0" fitWidth="50.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icon.jpg" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="titlePane" prefHeight="60.0" prefWidth="190.0" styleClass="themeStyle">
+               <children>
+                  <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="190.0" text="235Plus" textAlignment="CENTER" textFill="#c5a4a4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="60.0" prefWidth="602.0" styleClass="themeStyle" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="path" layoutX="58.0" layoutY="14.0" prefHeight="33.0" prefWidth="514.0" text="商品管理/商品信息" textFill="#8875b5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="21.0" />
+               </children>
+            </Pane>
+            <ToolBar maxWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="200.0" styleClass="themeStyle" HBox.hgrow="ALWAYS">
+              <items>
+                <Button fx:id="closeBtn" mnemonicParsing="false" prefHeight="23.0" prefWidth="23.0" text="X" />
+                  <Button fx:id="maxBtn" mnemonicParsing="false" prefHeight="23.0" prefWidth="23.0" text="□" />
+                  <Button fx:id="minBtn" mnemonicParsing="false" prefHeight="23.0" prefWidth="22.0" text="_" />
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <JFXDrawer fx:id="leftDrawer" alignment="TOP_LEFT" prefHeight="554.0" prefWidth="250.0" styleClass="themeStyle" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="0.0" prefWidth="0.0" styleClass="themeStyle">
+               <children>
+                  <Pane blendMode="SCREEN" prefHeight="37.0" prefWidth="250.0">
+                     <children>
+                        <TextField layoutX="13.0" layoutY="7.0" prefHeight="23.0" prefWidth="224.0" />
+                     </children>
+                  </Pane>
+                  <JFXTreeView fx:id="menuTree" styleClass="themeStyle" stylesheets="@../../../css/defaultTheme.css" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </JFXDrawer>
+   </left>
+   <center>
+      <TabPane fx:id="mTabPane" prefHeight="200.0" prefWidth="200.0" tabMinHeight="30.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
